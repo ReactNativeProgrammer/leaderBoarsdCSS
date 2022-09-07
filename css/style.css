@@ -8,6 +8,8 @@ body{
 main{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 img{
     width: 100%;
@@ -16,7 +18,8 @@ img{
     background-color: #fff;
     width: 870px;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 5px;
+    margin-top: 21px;
 }
 hr{
     border: 1px solid #e4e4e4
@@ -63,9 +66,11 @@ hr{
     flex-wrap: wrap;
 }
 .blog img{
-    width: 117px;
+    width: 177px;
+    height: 117px;
 }
 .blogInfo{
+    width: 50%;
     margin-left: 16px;
 }
 .blog h4, p{
@@ -82,3 +87,81 @@ hr{
     text-decoration: none;
     font-size: 16px;
 }
+/* Latest Courses Styles */
+
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.course{
+    padding: 10px;
+    box-shadow: 0px 0px 10px 0px #ddd;
+    border-radius: 5px;
+}
+.courseBanner img{
+    width: 250px;
+    height: 120px;
+}
+.courseInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.courseInfo .rateIcon span{
+    margin-left: 10px;
+    font-size: 14px;
+    color: #A2A2A2;
+}
+.courseInfo .rateIcon i.filled{
+    color: #FFC014;
+    font-size: 12px;
+}
+.courseInfo .rateIcon i.empty{
+    color: #AEAEAE;
+    font-size: 12px;
+}
+.courseDuration{
+    margin-left: 25px;
+    background-color: #FFE4E8;
+    color: #FF4A60;
+    font-size: 14px;
+    padding: 2px 6px;
+    border-radius: 25px;
+}
+
+ /*------------------------
+  Media Queries 
+  -------------------------*/
+
+/* ------------------------
+Mobile Device
+--------------------------- */
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog, .course{
+        flex-direction: column;
+    }
+   
+}
+
+/* Tablet Devise */
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
